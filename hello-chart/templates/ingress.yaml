@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: goodbye-ingress
+spec:
+  ingressClassName: nginx  # <--
+  rules:
+  - http:
+      paths:
+      - path: /goodbye
+        pathType: Prefix
+        backend:
+          service:
+            name: goodbye-svc
+            port:
+              number: 8080

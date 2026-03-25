@@ -1,0 +1,4 @@
+message: "Hello world!"
+endpoint: "/hello"
+cpuLimit: ""
+maxReplicas: 10
